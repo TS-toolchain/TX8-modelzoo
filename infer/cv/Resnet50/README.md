@@ -144,13 +144,7 @@ conda activate tx8_txnn
    cd ~/
    tar -xzvf  txnn_1.2.1_buildxxx.tar.gz
    ```
-
-   解压后得到txnn_1.2.1_buildxxx目录。解压后，与该示例相关的内容如下：
-   其中：
-
-   - yolov5s文件夹中包含运行yolov5s模型相关的模型，数据和脚本。
-   - script文件夹中 deploy文件夹为环境部署文件夹，其下install_vllm.sh文件为部署CV模型执行文件；
-   - txnn.1.2.1_buildxxx.tar.gz压缩包为推理引擎版本包。 
+   解压后得到txnn_1.2.1_buildxxx目录。
 
 2) 进入docker容器
 
@@ -175,7 +169,7 @@ bash install_vllm.sh /login_home/xxx txnn.1.2.1_buildxxx
    解压script/TxCompiler.1.2.1_buildxxx.tar.gz 工具，直接执行其中的sh命令接口，示例如下：
 
    ```shell
-   4) tar -xzvf TxCompiler.1.2.1_buildxxx.tar.gz
+   tar -xzvf TxCompiler.1.2.1_buildxxx.tar.gz
    
    cd TxCompiler
    #将onnx模型作为入参
@@ -195,23 +189,6 @@ python plot_image.py
 ```
 
 执行成功后可输出画框结果图保存在`./runs/detect`目录下。
-
-## mAP精度评估
-
-yolov5s/eval_coco目录下提供有脚本：eval_yolov5s_coco.py
-运行示例：在REX1032服务器，评估coco数据集精度。
-在会话窗口1执行如下命令，启动批量数据推理服务，指定--device参数选择卡运行，默认0号卡。
-
-```shell
-cd $HOME_PATH/txnn_1.2.0_buildxxx/yolov5s/eval_coco
-python eval_yolov5s_coco.py
-```
-
-执行成功，输出mAP结果和推理性能结果，界面如下所示：
-
-
-
-
 
 # 版本说明
 

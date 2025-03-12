@@ -183,7 +183,7 @@ bash install_vllm.sh /login_home/xxx txnn.1.2.1_buildxxx
    bash scripts/TxCompiler.sh ../../yolov5s/model/yolov5s_fp16.onnx
    ```
 
-## 图像分类推理
+## 图像检测推理
 
 `yolov5s/plot_image`目录下提供有脚本：plot_image.py，供用户在docker内执行，体验推理功能。
 运行示例：在`REX1032`服务器上，推理图片，并绘制检测框。
